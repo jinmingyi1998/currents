@@ -253,8 +253,8 @@ async def handle(request: aiohttp.ClientRequest):
             finally:
                 return web_response
 
-
 # async def clear_status():
+#     # clear data
 #     print("data cleared")
 #     return web.Response(body='cleared', status=200)
 
