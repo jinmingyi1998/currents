@@ -1,0 +1,23 @@
+@startuml
+
+actor user
+agent Agent
+database DB
+cloud LLM
+
+user <---> Agent
+
+Agent <---> DB
+
+Agent <---> LLM : function call
+
+node workers {
+    node worker_1
+    node worker_2
+    node worker_3
+}
+
+workers <~~~ Agent : fetch task
+workers ----> Agent : task done
+
+@enduml
